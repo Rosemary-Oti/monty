@@ -58,6 +58,8 @@ typedef struct Instruction
 	void (*f)(Node **stack, unsigned int line_number);
 } Instruction;
 
+
+/*ssize_t _getline(char **lineptr, size_t *n, FILE *stream);*/
 char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char *clean_line(char *content);
@@ -78,7 +80,7 @@ void modulo(Node **stack, unsigned int counter);
 void print_char(Node **stack, unsigned int counter);
 void print_string(Node **stack, unsigned int counter);
 void rotate_left(Node **stack, unsigned int counter);
-void rotate_right(Node **stack, _attribute_((unused)) unsigned int counter);
+void rotate_right(Node **stack, __attribute__((unused)) unsigned int counter);
 void add_node(Node **stack, int value);
 void add_to_queue(Node **stack, int value);
 void queue_mode(Node **stack, unsigned int counter);
